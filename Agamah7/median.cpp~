@@ -1,0 +1,17 @@
+
+float getMedian(const personType human[], int countVal)
+{
+  int findMed;
+  float med;
+  findMed = human[countVal/2].age;
+  if (countVal%2==1)
+  {
+    med = (human[findMed] + human[findMed-1])/2.0;
+  }
+  else
+  {
+    med = human[findMed].age;
+  }
+  
+  return med;
+}

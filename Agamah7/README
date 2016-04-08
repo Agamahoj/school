@@ -1,0 +1,109 @@
+File:    README
+Author:  Agamah Ojochete
+Program: Assignment 7
+Date:    30/3/16
+
+BUILDING THE PROGRAM
+   This program was written in C++ and distributed to be built on a 
+   Linux system.  To build the program, type 'make' to create the 
+   executable called 'prog'
+
+RUNNING THE PROGRAM
+   Type 'prog' at the command prompt after building the program.
+
+PROGRAM DESCRIPTION
+   This program will read ints from a text file called data that consists of person
+   test data for a single test.  The program will calculate the summary
+   for the test and output it to the file 'results'
+
+
+PROGRAM INPUT
+   All input comes from the text file.  The program will read the ints in the file. Input can be entered all on one line, 
+   or separate lines, or a combination of the two.Data must exist prior to the
+   execution of the program.  The program will read the input file
+   until end of file is reached.  The format of the input file follows:
+
+   
+   human 1 name
+   human 1 age
+   human 2 name
+   human 2 test score
+   ...
+   human n name
+   human n test score
+
+   For example:
+     Michael 55
+
+     Olivia 69
+     
+   
+PROGRAM OUTPUT
+   All output is written to 'results' containing the test summary. The
+   summary includes information for each student including the input
+   and percentages and letters.  The data for the people will be 
+   reported in descending order according to their age.
+   In addition, summary data for all person is produced including 
+   high, low, average, and median scores.
+
+   For example:
+
+   Name            Age    
+   ----------      -----  
+   Frank            36   
+   Jim              18   
+   Danny	     20
+
+   average age: 127.00
+   median age: 18
+
+PROGRAM DESIGN
+   This program stores all person data in an array of structs.  Each
+   struct stores the person's name and age.
+
+   The overall test summary is stored in a struct consisting of fields
+   for the  average, and median age.
+
+   The general algorithm
+      read the data and store in person
+      sort the person in assending order according to their age
+      calculate the pecentages and grades for each student
+      calculate the summary data
+      output the results
+
+
+FILE INDEX
+   file             function(s)        description
+   --------------   -----------------  ----------------------
+   constants.h                         constant declarations
+   
+   main.cpp         main               calls all other functions
+
+   output.cpp       output             outputs results to the screen
+   
+   read.cpp         read               read from the keyboard into the array
+
+   average.cpp      average            calculates the average of the numbers in the array
+   
+   median.cpp       median             finds the median number in the array
+   
+   display.cpp      display            finds the number in the array that occurs the most
+   
+   input			       has the ints for the program
+
+   makefile                            builds executable
+
+   README                              this file
+
+
+PROGRAM TESTING
+   This program was tested with different sets of data with the input file.  
+
+   Checked for a normal set of data partially filling the array
+   
+   Checked for the number of values exceeding the array size
+   
+   Checked for input of 1 value
+
+   There are no known bugs.  Any errors should be reported to:
+   agamahoj@mnstate.edu

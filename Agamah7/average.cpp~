@@ -1,0 +1,12 @@
+double getAverage(const personType person[], int countVal)
+{
+  // display the average value of values in the array
+  
+  float sum = 0.0;
+  double average = 0.0;
+  for (int index=0; index<countVal; index++)
+
+    sum += arrNumbers[index];
+   average = (sum/static_cast<float>(countVal));
+   return average;
+}
